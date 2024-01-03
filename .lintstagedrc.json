@@ -1,0 +1,7 @@
+{
+  "*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
+    "eslint --fix --ignore-path .gitignore"
+  ],
+  "*.{vue,scss,html,css}": ["stylelint --fix --ignore-path .gitignore"],
+  "*": ["prettier --ignore-unknown --write"]
+}
