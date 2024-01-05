@@ -1,0 +1,8 @@
+{
+  "globals": {
+    "ElLoading": true,
+    "ElMessage": true,
+    "ElMessageBox": true,
+    "ElNotification": true
+  }
+}
