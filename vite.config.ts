@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
 import AutoImport from 'unplugin-auto-import/vite'
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -42,6 +43,7 @@ export default defineConfig({
           importStyle: 'sass',
         }),
         IconsResolver({
+          customCollections: ['custom'],
           enabledCollections: ['ep'],
           prefix: 'icon',
         }),
@@ -50,6 +52,9 @@ export default defineConfig({
     }),
     Icons({
       autoInstall: true,
+      customCollections: {
+        custom: FileSystemIconLoader('./src/assets/icons'),
+      },
     }),
   ],
   resolve: {
