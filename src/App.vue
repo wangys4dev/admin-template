@@ -2,6 +2,7 @@
 import { zhCn } from 'element-plus/es/locale/index'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+fetch('/api/auth/login')
 </script>
 
 <template>
